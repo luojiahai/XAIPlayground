@@ -72,4 +72,6 @@ server {
 
 3. ```python -m ipykernel install --user --name ipykernel_py3 --display-name "Python (ipykernel_py3)"```
 
-4. ```conda deactivate```
+4. ```pip install -r requirements.txt```
+
+5. ```conda deactivate```
