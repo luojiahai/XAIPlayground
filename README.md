@@ -1,6 +1,6 @@
 # XAIPlayground
 
-### Setup Nginx
+### Setup NGINX
 1. ```sudo apt-get install nginx```
 
 2. ```cd /etc/nginx/sites-available```
