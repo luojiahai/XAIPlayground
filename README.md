@@ -11,10 +11,10 @@
 ```
 server {
     listen 80;
-    server_name notebook.elroot.com;
+    server_name {HOST_NAME};
 
     location / {
-        proxy_pass http://115.146.92.40:8888;
+        proxy_pass http://{IP_ADDRESS}:8888;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Real-IP $remote_addr;
@@ -26,7 +26,7 @@ server {
     }
 
     location ~* /(api/kernels/[^/]+/(channels|iopub|shell|stdin)|terminals/websocket)/? {
-        proxy_pass http://115.146.92.40:8888;
+        proxy_pass http://{IP_ADDRESS}:8888;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Real-IP $remote_addr;
